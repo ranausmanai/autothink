@@ -77,7 +77,7 @@ Your DataFrame
 
 ## Installation
 
-**From PyPI** (coming soon):
+**From PyPI:**
 ```bash
 pip install autothink
 ```
