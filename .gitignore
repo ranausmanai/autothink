@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data artifacts
+playground-series-*/
+*.zip
+*.csv
+kaggle_data/
+
+# Model artifacts
+*.joblib
+*.pkl
+*.onnx
+catboost_info/
+AutogluonModels/
+
+# Submissions
+submissions/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing / coverage
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# Build
+*.whl

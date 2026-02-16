@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autothink"
+version = "4.0.0"
+description = "Throw any data, get a working model. One-click AutoML with intelligent preprocessing, feature engineering, and ensemble optimization."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.9"
+authors = [
+    { name = "Usman" },
+]
+keywords = ["automl", "machine-learning", "tabular", "ensemble", "lightgbm", "xgboost", "catboost"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "scikit-learn>=1.2",
+    "lightgbm>=3.3",
+    "xgboost>=1.7",
+    "catboost>=1.1",
+    "category-encoders>=2.6",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+onnx = ["onnx", "skl2onnx"]
+api = ["fastapi", "uvicorn"]
+dev = ["pytest>=7.0", "pytest-timeout"]
+
+[project.urls]
+Homepage = "https://github.com/ranausmanai/autothink"
+Repository = "https://github.com/ranausmanai/autothink"
+Issues = "https://github.com/ranausmanai/autothink/issues"
+
+[tool.setuptools.packages.find]
+include = ["autothink*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
