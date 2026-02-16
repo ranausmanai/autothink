@@ -40,27 +40,9 @@ predictions = model.predict(pd.read_csv("test.csv"))
 
 ## How It Works
 
-```
-Your DataFrame
-     |
-     v
-+--------------------+     +-------------------------+     +---------------------+
-| Task Detection     | --> | Intelligent             | --> | Adaptive Feature    |
-| binary / multiclass|     | Preprocessing           |     | Engineering         |
-| / regression       |     | missing values, encode, |     | learns thresholds & |
-|                    |     | scale                   |     | interactions        |
-+--------------------+     +-------------------------+     +---------------------+
-                                                                    |
-                                                                    v
-+--------------------+     +-------------------------+     +---------------------+
-| Verification       | <-- | Blend Optimization      | <-- | Ensemble Training   |
-| fold stability,    |     | scipy-optimized weights  |     | LightGBM + XGBoost  |
-| leakage check      |     | + Platt calibration      |     | + CatBoost (K-fold) |
-+--------------------+     +-------------------------+     +---------------------+
-     |
-     v
-  model.predict(test_df)
-```
+<p align="center">
+  <img src="assets/autothink-pipeline.svg" alt="AutoThink end-to-end pipeline diagram from dataframe input through task detection, preprocessing, feature engineering, ensemble training, blend optimization, verification, and predict output." width="100%" />
+</p>
 
 | Step | What happens |
 |------|-------------|
